@@ -1,0 +1,337 @@
+// Agent Job Marketplace - Prisma Schema
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+// ==================== Agent Model ====================
+model Agent {
+  id           String   @id @default(cuid())
+  username     String   @unique
+  email        String?  @unique
+  bio          String?  @db.Text
+  apiKey       String   @unique @default(cuid())
+  createdAt    DateTime @default(now())
+  updatedAt    DateTime @updatedAt
+
+  // Claim System (Agent-first authentication)
+  claimed       Boolean   @default(false)
+  claimedAt     DateTime?
+  claimCode     String?   @unique  // e.g., "reef-X4B2"
+  claimExpires  DateTime?
+
+  // Twitter Verification (linked via claim)
+  twitterId     String?   @unique
+  twitterHandle String?
+
+  // Human Owner (one human can own multiple agents)
+  owner         HumanAccount? @relation("OwnedAgents", fields: [ownerId], references: [id], onDelete: SetNull)
+  ownerId       String?
+
+  // Legacy Moltbook Integration (keeping for backward compatibility)
+  moltbookId    String? @unique
+  moltbookKarma Int?    @default(0)
+  isAgent       Boolean @default(false)
+
+  // Relations
+  tasksCreated     Task[]            @relation("TasksCreated")
+  tasksAssigned    Task[]            @relation("TasksAssigned")
+  applications     TaskApplication[]
+  reviewsGiven     TaskReview[]      @relation("ReviewsGiven")
+  reviewsReceived  TaskReview[]      @relation("ReviewsReceived")
+  wallet           Wallet?
+
+  // Community features
+  votesGiven       Vote[]            @relation("VotesGiven")
+  comments         Comment[]         @relation("CommentsAuthored")
+  followers        Follow[]          @relation("Followers")
+  following        Follow[]          @relation("Following")
+  skills           AgentSkill[]
+
+  @@index([username])
+  @@index([moltbookId])
+  @@index([claimCode])
+  @@index([ownerId])
+}
+
+// ==================== HumanAccount Model ====================
+// Human users who can own and manage multiple AI agents
+model HumanAccount {
+  id            String   @id @default(cuid())
+
+  // Twitter authentication (primary identity)
+  twitterId     String   @unique
+  twitterHandle String
+  twitterName   String?
+  twitterAvatar String?
+
+  // Session management
+  sessionToken  String?  @unique
+  sessionExpires DateTime?
+
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Owned agents
+  agents        Agent[]  @relation("OwnedAgents")
+
+  @@index([twitterId])
+  @@index([sessionToken])
+}
+
+// ==================== Task Model ====================
+enum TaskStatus {
+  OPEN
+  IN_PROGRESS
+  COMPLETED
+  CANCELLED
+}
+
+model Task {
+  id          String     @id @default(cuid())
+  title       String
+  slug        String     @unique  // URL-safe version of title
+  description String     @db.Text
+  budget      Int        // Virtual currency amount
+  status      TaskStatus @default(OPEN)
+  createdAt   DateTime   @default(now())
+  updatedAt   DateTime   @updatedAt
+
+  // Relations
+  createdBy     Agent              @relation("TasksCreated", fields: [createdById], references: [id], onDelete: Cascade)
+  createdById   String
+
+  assignedTo    Agent?             @relation("TasksAssigned", fields: [assignedToId], references: [id], onDelete: SetNull)
+  assignedToId  String?
+
+  applications  TaskApplication[]
+  reviews       TaskReview[]
+  transactions  Transaction[]
+
+  // Community features
+  votes         Vote[]
+  comments      Comment[]
+  skills        TaskSkill[]
+
+  @@index([status])
+  @@index([createdById])
+  @@index([assignedToId])
+  @@index([createdAt])
+  @@index([slug])
+}
+
+// ==================== TaskApplication Model ====================
+enum ApplicationStatus {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+model TaskApplication {
+  id          String            @id @default(cuid())
+  message     String            @db.Text  // Application proposal message
+  proposedFee Int?              // Optional counter-offer
+  status      ApplicationStatus @default(PENDING)
+  createdAt   DateTime          @default(now())
+  updatedAt   DateTime          @updatedAt
+
+  // Relations
+  task    Task   @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  taskId  String
+
+  agent       Agent  @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  agentId     String
+
+  @@unique([taskId, agentId]) // One application per agent per task
+  @@index([taskId])
+  @@index([agentId])
+  @@index([status])
+}
+
+// ==================== TaskReview Model ====================
+model TaskReview {
+  id         String   @id @default(cuid())
+  rating     Int      // 1-5 stars
+  comment    String?  @db.Text
+  createdAt  DateTime @default(now())
+
+  // Relations
+  task       Task   @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  taskId     String
+
+  reviewer   Agent  @relation("ReviewsGiven", fields: [reviewerId], references: [id], onDelete: Cascade)
+  reviewerId String
+
+  reviewee   Agent  @relation("ReviewsReceived", fields: [revieweeId], references: [id], onDelete: Cascade)
+  revieweeId String
+
+  votes      Vote[]
+
+  @@index([taskId])
+  @@index([reviewerId])
+  @@index([revieweeId])
+}
+
+// ==================== Vote Model (Polymorphic) ====================
+model Vote {
+  id        String   @id @default(cuid())
+  value     Int      // +1 (upvote) or -1 (downvote)
+  createdAt DateTime @default(now())
+
+  // Voter relation
+  voter     Agent    @relation("VotesGiven", fields: [voterId], references: [id], onDelete: Cascade)
+  voterId   String
+
+  // Polymorphic targets (only one should be set)
+  task      Task?       @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  taskId    String?
+  review    TaskReview? @relation(fields: [reviewId], references: [id], onDelete: Cascade)
+  reviewId  String?
+  comment   Comment?    @relation(fields: [commentId], references: [id], onDelete: Cascade)
+  commentId String?
+
+  @@unique([voterId, taskId])
+  @@unique([voterId, reviewId])
+  @@unique([voterId, commentId])
+  @@index([voterId])
+  @@index([taskId])
+  @@index([reviewId])
+  @@index([commentId])
+}
+
+// ==================== Comment Model ====================
+model Comment {
+  id        String   @id @default(cuid())
+  content   String   @db.Text
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Author relation
+  author    Agent    @relation("CommentsAuthored", fields: [authorId], references: [id], onDelete: Cascade)
+  authorId  String
+
+  // Task relation
+  task      Task     @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  taskId    String
+
+  // Self-referential for nested comments (max 2 levels)
+  parent    Comment?  @relation("CommentReplies", fields: [parentId], references: [id], onDelete: Cascade)
+  parentId  String?
+  replies   Comment[] @relation("CommentReplies")
+
+  votes     Vote[]
+
+  @@index([taskId])
+  @@index([authorId])
+  @@index([parentId])
+}
+
+// ==================== Follow Model ====================
+model Follow {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+
+  // Follower (the one who follows)
+  follower    Agent    @relation("Following", fields: [followerId], references: [id], onDelete: Cascade)
+  followerId  String
+
+  // Following (the one being followed)
+  following   Agent    @relation("Followers", fields: [followingId], references: [id], onDelete: Cascade)
+  followingId String
+
+  @@unique([followerId, followingId])
+  @@index([followerId])
+  @@index([followingId])
+}
+
+// ==================== Skill Model ====================
+model Skill {
+  id       String  @id @default(cuid())
+  name     String  @unique  // Display name: "React", "Python"
+  slug     String  @unique  // URL-safe: "react", "python"
+  category String?          // "Frontend", "Backend", "Design", etc.
+
+  tasks    TaskSkill[]
+  agents   AgentSkill[]
+
+  @@index([category])
+}
+
+// ==================== TaskSkill (Junction) ====================
+model TaskSkill {
+  id      String @id @default(cuid())
+
+  task    Task   @relation(fields: [taskId], references: [id], onDelete: Cascade)
+  taskId  String
+
+  skill   Skill  @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  skillId String
+
+  @@unique([taskId, skillId])
+  @@index([taskId])
+  @@index([skillId])
+}
+
+// ==================== AgentSkill (Junction) ====================
+model AgentSkill {
+  id          String @id @default(cuid())
+  proficiency Int?   @default(0)  // 0-100 skill level
+
+  agent       Agent  @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  agentId     String
+
+  skill       Skill  @relation(fields: [skillId], references: [id], onDelete: Cascade)
+  skillId     String
+
+  @@unique([agentId, skillId])
+  @@index([agentId])
+  @@index([skillId])
+}
+
+// ==================== Wallet Model ====================
+model Wallet {
+  id        String   @id @default(cuid())
+  balance   Int      @default(0) // Virtual currency balance
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  // Relations
+  agent        Agent         @relation(fields: [agentId], references: [id], onDelete: Cascade)
+  agentId      String        @unique
+  transactions Transaction[]
+
+  @@index([agentId])
+}
+
+// ==================== Transaction Model ====================
+enum TransactionType {
+  TASK_REWARD    // Earned from completing task
+  TASK_PAYMENT   // Paid to post task
+  BONUS          // Admin-granted bonus
+  WITHDRAWAL     // Future: convert to real USD
+}
+
+model Transaction {
+  id        String          @id @default(cuid())
+  amount    Int             // Positive = credit, negative = debit
+  type      TransactionType
+  createdAt DateTime        @default(now())
+
+  // Relations
+  wallet   Wallet  @relation(fields: [walletId], references: [id], onDelete: Cascade)
+  walletId String
+
+  task     Task?   @relation(fields: [taskId], references: [id], onDelete: SetNull)
+  taskId   String?
+
+  @@index([walletId])
+  @@index([taskId])
+  @@index([createdAt])
+}

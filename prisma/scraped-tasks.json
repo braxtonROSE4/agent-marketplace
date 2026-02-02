@@ -1,0 +1,402 @@
+[
+  {
+    "title": "Build a modern e-commerce website with React and Node.js",
+    "description": "We're looking for an experienced full-stack developer to build a complete e-commerce platform. Requirements: React.js frontend, Node.js/Express backend, MongoDB database, Stripe payment integration, responsive design, admin dashboard, and product management system. Must have experience with authentication and secure payment processing.",
+    "budget_min": 1500,
+    "budget_max": 3000,
+    "category": "web_dev",
+    "skills": ["React", "Node.js", "MongoDB", "Express", "Stripe"]
+  },
+  {
+    "title": "Mobile app development for iOS and Android - Food Delivery App",
+    "description": "Seeking a skilled mobile developer to create a food delivery application similar to UberEats. Need both iOS and Android versions using React Native or Flutter. Features include user authentication, real-time tracking, payment gateway, push notifications, and admin panel. Timeline: 6-8 weeks.",
+    "budget_min": 3000,
+    "budget_max": 6000,
+    "category": "mobile",
+    "skills": ["React Native", "Flutter", "Firebase", "Google Maps API"]
+  },
+  {
+    "title": "Logo design for tech startup",
+    "description": "We need a modern, minimalist logo for our AI/ML startup. Looking for something clean, professional, and memorable. Deliverables: vector files (AI, SVG), PNG in various sizes, brand guidelines document. Prefer designers with experience in tech industry branding.",
+    "budget_min": 200,
+    "budget_max": 500,
+    "category": "design",
+    "skills": ["Adobe Illustrator", "Logo Design", "Brand Identity"]
+  },
+  {
+    "title": "Data analysis and visualization for sales metrics",
+    "description": "Need a data analyst to process our sales data from the past 2 years and create interactive dashboards. Must be proficient in Python (pandas, matplotlib), SQL, and Tableau or Power BI. Deliverables include cleaned dataset, statistical analysis report, and dashboard with key metrics.",
+    "budget_min": 800,
+    "budget_max": 1500,
+    "category": "data",
+    "skills": ["Python", "SQL", "Tableau", "Data Visualization"]
+  },
+  {
+    "title": "Content writer for tech blog - 10 articles",
+    "description": "Looking for an experienced tech writer to create 10 high-quality blog posts (1500-2000 words each) on topics related to AI, machine learning, and web development. Must have SEO knowledge and ability to explain complex technical concepts in accessible language. Samples required.",
+    "budget_min": 400,
+    "budget_max": 800,
+    "category": "writing",
+    "skills": ["Content Writing", "SEO", "Technical Writing"]
+  },
+  {
+    "title": "Landing page redesign for SaaS product",
+    "description": "Our SaaS landing page needs a complete redesign to improve conversion rates. Need a designer who understands conversion optimization, can create high-fidelity mockups in Figma, and has experience with A/B testing layouts. Responsive design is a must.",
+    "budget_min": 600,
+    "budget_max": 1200,
+    "category": "design",
+    "skills": ["Figma", "UI/UX Design", "Web Design", "Conversion Optimization"]
+  },
+  {
+    "title": "Python automation script for data scraping",
+    "description": "Need a Python developer to create an automation script that scrapes product data from e-commerce sites, cleans the data, and stores it in a PostgreSQL database. Must handle rate limiting, use proper headers, and include error handling. Experience with BeautifulSoup/Scrapy required.",
+    "budget_min": 500,
+    "budget_max": 1000,
+    "category": "python",
+    "skills": ["Python", "Web Scraping", "PostgreSQL", "BeautifulSoup"]
+  },
+  {
+    "title": "WordPress website customization and optimization",
+    "description": "Existing WordPress site needs customization: custom theme adjustments, plugin configuration, speed optimization, and SEO improvements. Also need to integrate WooCommerce for online sales. Must be familiar with PHP, WordPress best practices, and site performance optimization.",
+    "budget_min": 400,
+    "budget_max": 800,
+    "category": "web_dev",
+    "skills": ["WordPress", "PHP", "WooCommerce", "SEO"]
+  },
+  {
+    "title": "UI/UX design for healthcare mobile app",
+    "description": "Designing user interface for a healthcare appointment booking app. Need complete UX flow, wireframes, and high-fidelity designs for 15-20 screens. Should follow Material Design or Human Interface Guidelines. Must have healthcare/medical app design experience.",
+    "budget_min": 1000,
+    "budget_max": 2000,
+    "category": "design",
+    "skills": ["Figma", "UI/UX", "Mobile Design", "Wireframing"]
+  },
+  {
+    "title": "Full-stack developer for MVP development - Fitness Tracking App",
+    "description": "Building an MVP for a fitness tracking application. Tech stack: Vue.js frontend, Python/Django backend, PostgreSQL database. Features: user profiles, workout logging, progress tracking, social features. Looking for someone who can work independently and deliver in 4 weeks.",
+    "budget_min": 2000,
+    "budget_max": 4000,
+    "category": "web_dev",
+    "skills": ["Vue.js", "Django", "PostgreSQL", "REST API"]
+  },
+  {
+    "title": "Social media graphics package for Instagram",
+    "description": "Need a graphic designer to create 30 Instagram post templates in Canva or Adobe Creative Suite. Should be cohesive brand aesthetic, easy to edit, and include templates for quotes, product showcases, and announcements. Brand guidelines will be provided.",
+    "budget_min": 300,
+    "budget_max": 600,
+    "category": "design",
+    "skills": ["Canva", "Instagram Marketing", "Graphic Design"]
+  },
+  {
+    "title": "Machine learning model for customer churn prediction",
+    "description": "Develop a machine learning model to predict customer churn using historical data. Prefer Python with scikit-learn or TensorFlow. Deliverables: trained model, evaluation metrics report, and deployment script. Must have experience with classification problems and model interpretation.",
+    "budget_min": 1500,
+    "budget_max": 3000,
+    "category": "data",
+    "skills": ["Machine Learning", "Python", "scikit-learn", "Data Science"]
+  },
+  {
+    "title": "Chrome extension development for productivity",
+    "description": "Build a Chrome extension that helps users track time spent on websites and provides productivity insights. Need JavaScript/TypeScript, Chrome API knowledge, local storage management, and clean UI. Should work offline and respect user privacy.",
+    "budget_min": 800,
+    "budget_max": 1500,
+    "category": "web_dev",
+    "skills": ["JavaScript", "Chrome Extensions", "TypeScript"]
+  },
+  {
+    "title": "SEO audit and optimization for small business website",
+    "description": "Comprehensive SEO audit of our 20-page business website. Need on-page optimization, technical SEO fixes, keyword research, competitor analysis, and backlink strategy. Deliverables include detailed report and implementation of recommendations. Experience with local SEO is a plus.",
+    "budget_min": 500,
+    "budget_max": 1000,
+    "category": "marketing",
+    "skills": ["SEO", "Google Analytics", "Keyword Research"]
+  },
+  {
+    "title": "Shopify store setup and theme customization",
+    "description": "Set up a new Shopify store for our clothing brand. Need theme selection, customization, product upload (50 products), payment gateway integration, and basic SEO setup. Must be familiar with Shopify Liquid and app integrations.",
+    "budget_min": 600,
+    "budget_max": 1200,
+    "category": "ecommerce",
+    "skills": ["Shopify", "E-commerce", "Liquid"]
+  },
+  {
+    "title": "Video editing for YouTube channel - 5 videos",
+    "description": "Edit 5 YouTube videos (10-15 minutes each) for our tech review channel. Need cuts, transitions, color correction, audio enhancement, lower thirds, and intro/outro animations. Experience with tech content and fast-paced editing style preferred. Provide sample reel.",
+    "budget_min": 400,
+    "budget_max": 800,
+    "category": "video",
+    "skills": ["Video Editing", "Adobe Premiere Pro", "After Effects"]
+  },
+  {
+    "title": "API development with Node.js and PostgreSQL",
+    "description": "Build a RESTful API for our project management tool. Endpoints for users, projects, tasks, and comments. Need authentication (JWT), rate limiting, proper error handling, and API documentation. Must follow REST best practices and include unit tests.",
+    "budget_min": 1200,
+    "budget_max": 2500,
+    "category": "backend",
+    "skills": ["Node.js", "Express", "PostgreSQL", "REST API", "JWT"]
+  },
+  {
+    "title": "Business card and stationery design",
+    "description": "Design business cards, letterhead, and email signature for a consulting firm. Need modern, professional look that aligns with our website branding. Deliverables: print-ready PDFs, editable source files, and HTML email signature template.",
+    "budget_min": 250,
+    "budget_max": 500,
+    "category": "design",
+    "skills": ["Print Design", "Adobe InDesign", "Brand Identity"]
+  },
+  {
+    "title": "Database optimization for MySQL performance",
+    "description": "Our MySQL database is experiencing slow query times. Need an expert to analyze queries, optimize indexes, refactor slow queries, and implement caching strategies. Should also provide recommendations for database architecture improvements and scaling strategies.",
+    "budget_min": 800,
+    "budget_max": 1500,
+    "category": "database",
+    "skills": ["MySQL", "Database Optimization", "SQL Performance Tuning"]
+  },
+  {
+    "title": "React Native app bug fixes and feature additions",
+    "description": "Existing React Native app needs bug fixes (5-6 issues) and 3 new features added. Issues include navigation problems, API integration bugs, and UI inconsistencies. New features: push notifications, in-app purchases, and social sharing. Code must be well-documented.",
+    "budget_min": 1000,
+    "budget_max": 2000,
+    "category": "mobile",
+    "skills": ["React Native", "JavaScript", "Mobile Development"]
+  },
+  {
+    "title": "Email marketing campaign design - 10 templates",
+    "description": "Create 10 responsive email templates for our marketing campaigns using Mailchimp or similar platform. Templates should include welcome email, newsletter, product announcements, and promotional emails. Must be mobile-responsive and follow email design best practices.",
+    "budget_min": 400,
+    "budget_max": 800,
+    "category": "design",
+    "skills": ["Email Marketing", "HTML/CSS", "Mailchimp"]
+  },
+  {
+    "title": "Automated testing setup for web application",
+    "description": "Set up automated testing for our web app using Cypress or Selenium. Need end-to-end tests for critical user flows, CI/CD integration, and documentation on how to maintain tests. Should cover login, checkout, and core features. Experience with test-driven development preferred.",
+    "budget_min": 1000,
+    "budget_max": 2000,
+    "category": "testing",
+    "skills": ["Cypress", "Selenium", "Test Automation", "CI/CD"]
+  },
+  {
+    "title": "Infographic design for annual report",
+    "description": "Create 5 professional infographics to visualize our company's annual performance data. Should be print-ready and suitable for both digital and physical distribution. Need a designer who can transform complex data into engaging visual stories. Corporate style preferred.",
+    "budget_min": 500,
+    "budget_max": 1000,
+    "category": "design",
+    "skills": ["Infographic Design", "Data Visualization", "Adobe Illustrator"]
+  },
+  {
+    "title": "DevOps engineer for AWS infrastructure setup",
+    "description": "Set up production infrastructure on AWS: EC2 instances, RDS database, S3 storage, CloudFront CDN, load balancers, and auto-scaling. Need someone who can implement CI/CD pipelines, monitoring (CloudWatch), and security best practices. Infrastructure as Code (Terraform) preferred.",
+    "budget_min": 2000,
+    "budget_max": 4000,
+    "category": "devops",
+    "skills": ["AWS", "DevOps", "Terraform", "CI/CD", "Docker"]
+  },
+  {
+    "title": "Copywriting for SaaS landing pages - 5 pages",
+    "description": "Write conversion-focused copy for 5 SaaS product pages: homepage, features, pricing, about us, and contact. Need someone who understands SaaS messaging, can write compelling headlines, and knows how to address customer pain points. SEO optimization included.",
+    "budget_min": 600,
+    "budget_max": 1200,
+    "category": "writing",
+    "skills": ["Copywriting", "SaaS Marketing", "SEO"]
+  },
+  {
+    "title": "Blockchain smart contract development - ERC-20 Token",
+    "description": "Develop and deploy an ERC-20 token smart contract on Ethereum. Need: token creation, transfer functions, security audit, and deployment to testnet and mainnet. Must follow OpenZeppelin standards and provide comprehensive documentation. Experience with Solidity and Hardhat required.",
+    "budget_min": 2500,
+    "budget_max": 5000,
+    "category": "blockchain",
+    "skills": ["Solidity", "Blockchain", "Smart Contracts", "Ethereum"]
+  },
+  {
+    "title": "Podcast editing and production - 4 episodes",
+    "description": "Edit 4 podcast episodes (45-60 minutes each): remove filler words, enhance audio quality, add intro/outro music, normalize volume levels, and export in multiple formats. Need someone familiar with podcasting standards and can deliver broadcast-quality audio.",
+    "budget_min": 300,
+    "budget_max": 600,
+    "category": "audio",
+    "skills": ["Audio Editing", "Podcast Production", "Adobe Audition"]
+  },
+  {
+    "title": "Salesforce customization and integration",
+    "description": "Customize Salesforce CRM for our sales team: custom objects, workflows, validation rules, and reports. Also need integration with our website contact form and email marketing platform (Mailchimp). Must be Salesforce certified and have experience with Apex and Lightning components.",
+    "budget_min": 1500,
+    "budget_max": 3000,
+    "category": "crm",
+    "skills": ["Salesforce", "Apex", "CRM", "Integration"]
+  },
+  {
+    "title": "Illustration pack for children's book - 15 illustrations",
+    "description": "Create 15 full-color illustrations for a children's book (ages 4-7). Style should be warm, playful, and engaging. Characters and scenes will be described in detail. Deliverables: high-res PNG and layered PSD/AI files. Portfolio with children's book experience required.",
+    "budget_min": 1000,
+    "budget_max": 2000,
+    "category": "illustration",
+    "skills": ["Illustration", "Children's Book Art", "Digital Painting"]
+  },
+  {
+    "title": "Cybersecurity audit for small business",
+    "description": "Conduct comprehensive security audit of our infrastructure: network security, access controls, vulnerability assessment, and penetration testing. Provide detailed report with findings and remediation recommendations. Must have cybersecurity certifications (CISSP, CEH, or similar).",
+    "budget_min": 2000,
+    "budget_max": 4000,
+    "category": "security",
+    "skills": ["Cybersecurity", "Penetration Testing", "Network Security"]
+  },
+  {
+    "title": "3D product modeling and rendering",
+    "description": "Create photorealistic 3D models and renders of our product line (5 products) for use in marketing materials. Need: high-detail models in Blender or 3ds Max, multiple angles, lifestyle scenes, and both static images and 360-degree views. Product photos will be provided.",
+    "budget_min": 1200,
+    "budget_max": 2500,
+    "category": "3d",
+    "skills": ["3D Modeling", "Blender", "Product Visualization", "Rendering"]
+  },
+  {
+    "title": "Flutter app development - Budget tracker",
+    "description": "Build a personal budget tracking mobile app with Flutter. Features: expense categorization, income tracking, budget goals, charts/visualizations, export to CSV, and cloud sync. Design should be intuitive and modern. Need both iOS and Android versions.",
+    "budget_min": 1500,
+    "budget_max": 3000,
+    "category": "mobile",
+    "skills": ["Flutter", "Dart", "Firebase", "Mobile UI"]
+  },
+  {
+    "title": "Google Ads campaign management - 3 months",
+    "description": "Manage Google Ads campaigns for our e-commerce store over 3 months. Services include: keyword research, ad copywriting, bid optimization, A/B testing, conversion tracking setup, and monthly performance reports. Budget: $2000/month ad spend (separate from service fee).",
+    "budget_min": 1500,
+    "budget_max": 3000,
+    "category": "marketing",
+    "skills": ["Google Ads", "PPC", "Digital Marketing", "Conversion Optimization"]
+  },
+  {
+    "title": "Technical documentation for API",
+    "description": "Write comprehensive technical documentation for our REST API. Include: endpoint descriptions, request/response examples, authentication guide, error codes, rate limiting info, and code samples in multiple languages. Should be formatted in Markdown and hosted on GitBook or similar.",
+    "budget_min": 600,
+    "budget_max": 1200,
+    "category": "writing",
+    "skills": ["Technical Writing", "API Documentation", "Markdown"]
+  },
+  {
+    "title": "Unity game development - 2D puzzle game",
+    "description": "Develop a 2D puzzle game prototype in Unity. Need game mechanics implementation, 10 levels, UI design, sound effects integration, and mobile controls (iOS/Android). Assets will be provided. Looking for someone who can bring creative ideas to improve gameplay.",
+    "budget_min": 2000,
+    "budget_max": 4000,
+    "category": "gamedev",
+    "skills": ["Unity", "C#", "Game Development", "2D Games"]
+  },
+  {
+    "title": "Brand identity package for new startup",
+    "description": "Complete brand identity creation: logo design, color palette, typography system, brand guidelines document, social media templates, and presentation deck template. Need a designer who can develop a cohesive visual system that works across digital and print media.",
+    "budget_min": 1500,
+    "budget_max": 3000,
+    "category": "branding",
+    "skills": ["Brand Identity", "Logo Design", "Graphic Design"]
+  },
+  {
+    "title": "Data pipeline with Apache Airflow",
+    "description": "Build an ETL data pipeline using Apache Airflow. Extract data from multiple sources (APIs, databases, CSV files), transform using Python/Pandas, and load into data warehouse. Need proper error handling, logging, monitoring, and documentation. Experience with AWS or GCP preferred.",
+    "budget_min": 1800,
+    "budget_max": 3500,
+    "category": "data",
+    "skills": ["Apache Airflow", "Python", "ETL", "Data Engineering"]
+  },
+  {
+    "title": "iOS app UI redesign - SwiftUI",
+    "description": "Redesign the user interface of our existing iOS app using SwiftUI. Current app has outdated design and needs modernization while maintaining all functionality. Need someone who understands iOS Human Interface Guidelines and has strong design sense. Portfolio required.",
+    "budget_min": 1500,
+    "budget_max": 3000,
+    "category": "mobile",
+    "skills": ["SwiftUI", "iOS Development", "Mobile UI", "Swift"]
+  },
+  {
+    "title": "Virtual assistant for calendar and email management",
+    "description": "Need a reliable virtual assistant to manage calendar, filter and respond to emails, schedule meetings, and handle administrative tasks. Should be available during EST business hours, proficient in Google Workspace, and excellent written English. Part-time, 20 hours/week.",
+    "budget_min": 800,
+    "budget_max": 1500,
+    "category": "admin",
+    "skills": ["Virtual Assistant", "Calendar Management", "Email Management"]
+  },
+  {
+    "title": "Laravel web application development - Job Board",
+    "description": "Build a job board web application using Laravel. Features: job postings, company profiles, applicant tracking, resume upload, search/filter, email notifications, payment integration (for premium listings), and admin panel. Need clean code and following Laravel best practices.",
+    "budget_min": 2500,
+    "budget_max": 5000,
+    "category": "web_dev",
+    "skills": ["Laravel", "PHP", "MySQL", "Vue.js"]
+  },
+  {
+    "title": "Motion graphics for product demo video",
+    "description": "Create a 90-second motion graphics video explaining our SaaS product. Need storyboard, voiceover script collaboration, animated scenes, background music, and final render in 1080p. Style should be modern, clean, and professional. Experience with explainer videos required.",
+    "budget_min": 1000,
+    "budget_max": 2000,
+    "category": "video",
+    "skills": ["Motion Graphics", "After Effects", "Explainer Videos"]
+  },
+  {
+    "title": "WooCommerce custom plugin development",
+    "description": "Develop a custom WooCommerce plugin to add specific functionality: custom product fields, conditional pricing based on user roles, bulk order discounts, and custom checkout fields. Must follow WordPress coding standards and be compatible with latest WooCommerce version.",
+    "budget_min": 1000,
+    "budget_max": 2000,
+    "category": "wordpress",
+    "skills": ["WooCommerce", "PHP", "WordPress Plugin Development"]
+  },
+  {
+    "title": "Financial modeling in Excel - 5-year projection",
+    "description": "Create a comprehensive financial model for a startup: 5-year revenue projections, cash flow analysis, profit & loss statements, break-even analysis, and scenario planning. Must be dynamic with clear assumptions, charts, and executive summary dashboard. CPA or financial analyst preferred.",
+    "budget_min": 800,
+    "budget_max": 1500,
+    "category": "finance",
+    "skills": ["Financial Modeling", "Excel", "Financial Analysis"]
+  },
+  {
+    "title": "Microservices architecture with Docker and Kubernetes",
+    "description": "Refactor monolithic application into microservices architecture. Set up Docker containers, Kubernetes cluster, service mesh, API gateway, and implement distributed logging and monitoring. Need expertise in containerization, orchestration, and cloud-native architectures.",
+    "budget_min": 3000,
+    "budget_max": 6000,
+    "category": "devops",
+    "skills": ["Docker", "Kubernetes", "Microservices", "Cloud Architecture"]
+  },
+  {
+    "title": "Interior design 3D visualization - Apartment",
+    "description": "Create photorealistic 3D renderings of apartment interior design (living room, bedroom, kitchen). Need floor plan review, furniture placement suggestions, and 5-7 high-quality renders from different angles. Experience with residential interiors and modern design styles required.",
+    "budget_min": 1200,
+    "budget_max": 2500,
+    "category": "3d",
+    "skills": ["3D Visualization", "Interior Design", "SketchUp", "V-Ray"]
+  },
+  {
+    "title": "Natural Language Processing - Sentiment Analysis Tool",
+    "description": "Develop a sentiment analysis tool using Python and NLP libraries (NLTK, spaCy, or transformers). Should analyze customer reviews and classify sentiment as positive, negative, or neutral. Deliverables: trained model, REST API, and simple web interface for testing.",
+    "budget_min": 1500,
+    "budget_max": 3000,
+    "category": "ai",
+    "skills": ["NLP", "Python", "Machine Learning", "Text Analysis"]
+  },
+  {
+    "title": "Zoho CRM integration with third-party apps",
+    "description": "Integrate Zoho CRM with our existing tools: Mailchimp for email marketing, Slack for notifications, QuickBooks for accounting, and custom webhook to our website. Need automation workflows, data synchronization, and comprehensive documentation. Zoho certification preferred.",
+    "budget_min": 1200,
+    "budget_max": 2500,
+    "category": "integration",
+    "skills": ["Zoho CRM", "API Integration", "Automation", "Webhooks"]
+  },
+  {
+    "title": "Accessible website audit (WCAG 2.1 compliance)",
+    "description": "Conduct accessibility audit of our website for WCAG 2.1 Level AA compliance. Test with screen readers, keyboard navigation, color contrast, and semantic HTML. Provide detailed report with violations, recommendations, and prioritized remediation plan. Accessibility certification required.",
+    "budget_min": 1000,
+    "budget_max": 2000,
+    "category": "accessibility",
+    "skills": ["Web Accessibility", "WCAG", "Accessibility Testing"]
+  },
+  {
+    "title": "Telegram bot development for customer support",
+    "description": "Create a Telegram bot for automating customer support: answer FAQs, ticket creation, order status lookup, and escalation to human agents. Need integration with our database (PostgreSQL) and support for both English and Spanish. Should handle 1000+ daily interactions.",
+    "budget_min": 1000,
+    "budget_max": 2000,
+    "category": "chatbot",
+    "skills": ["Telegram Bot API", "Python", "Chatbot Development", "PostgreSQL"]
+  },
+  {
+    "title": "AR filter creation for Instagram/Snapchat",
+    "description": "Design and develop 3 branded AR filters for Instagram and Snapchat. Filters should be interactive, engaging, and align with our brand identity. Need experience with Spark AR Studio and Lens Studio. Deliverables include source files and deployment to platforms.",
+    "budget_min": 800,
+    "budget_max": 1500,
+    "category": "ar",
+    "skills": ["Spark AR", "Augmented Reality", "Lens Studio", "3D Modeling"]
+  }
+]

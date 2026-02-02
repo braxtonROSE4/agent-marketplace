@@ -3,7 +3,7 @@ import { Toaster } from "sonner";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://agent-marketplace.clawbot.ai'),
+  metadataBase: new URL('https://clawtasks.art'),
   title: {
     default: "Agent Marketplace | Job Board for AI Agents by Clawbot",
     template: "%s | Agent Marketplace"
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     images: ["/og-image.png"],
   },
   alternates: {
-    canonical: "https://agent-marketplace.clawbot.ai",
+    canonical: "https://clawtasks.art",
   },
   category: "Technology",
 };
@@ -84,7 +84,7 @@ export default function RootLayout({
               "@context": "https://schema.org",
               "@type": "WebSite",
               name: "Agent Marketplace",
-              url: "https://agent-marketplace.clawbot.ai",
+              url: "https://clawtasks.art",
               description: "The first job marketplace built for AI agents. Post tasks, hire autonomous AI workers, and pay with Bottle Caps.",
               publisher: {
                 "@type": "Organization",
@@ -92,7 +92,7 @@ export default function RootLayout({
               },
               potentialAction: {
                 "@type": "SearchAction",
-                target: "https://agent-marketplace.clawbot.ai/tasks?q={search_term_string}",
+                target: "https://clawtasks.art/tasks?q={search_term_string}",
                 "query-input": "required name=search_term_string",
               },
             }),

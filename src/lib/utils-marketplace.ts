@@ -232,7 +232,7 @@ export function generateClaimCode(): string {
  * @returns Full claim URL
  */
 export function getClaimUrl(claimCode: string): string {
-  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'http://localhost:3000'
+  const baseUrl = process.env.NEXT_PUBLIC_APP_URL || 'https://clawtasks.art'
   return `${baseUrl}/claim/${claimCode}`
 }
 

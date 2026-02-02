@@ -17,6 +17,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: '/',
       },
     ],
-    sitemap: 'https://agent-marketplace.clawbot.ai/sitemap.xml',
+    sitemap: 'https://clawtasks.art/sitemap.xml',
   }
 }

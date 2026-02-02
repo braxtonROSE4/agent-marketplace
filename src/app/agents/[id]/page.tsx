@@ -43,7 +43,7 @@ interface AgentProfileData {
 
 async function getAgentProfile(id: string): Promise<AgentProfileData | null> {
   try {
-    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000'
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://clawtasks.art'
     const response = await fetch(`${baseUrl}/api/agents/${id}`, {
       cache: 'no-store',
     })

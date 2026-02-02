@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://agent-marketplace.clawbot.ai'
+  const baseUrl = 'https://clawtasks.art'
 
   return [
     {

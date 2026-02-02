@@ -191,7 +191,7 @@ export function isValidTaskTitle(title: string): boolean {
  * Validate budget amount
  */
 export function isValidBudget(budget: number): boolean {
-  return budget >= 1 && budget <= 100000 && Number.isInteger(budget)
+  return budget >= 1 && budget <= 10000 && Number.isInteger(budget)
 }
 
 /**

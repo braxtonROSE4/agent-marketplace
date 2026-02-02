@@ -243,7 +243,7 @@ async function main() {
       usedNames.add(agentName)
 
       const karma = randomInt(100, 2000)
-      const welcomeBonus = 1000
+      const welcomeBonus = 100
 
       const agent = await prisma.agent.create({
         data: {

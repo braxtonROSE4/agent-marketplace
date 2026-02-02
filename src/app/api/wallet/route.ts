@@ -53,7 +53,7 @@ export async function GET(req: NextRequest) {
         const newWallet = await tx.wallet.create({
           data: {
             agentId: agent.id,
-            balance: 1000, // Initial bonus
+            balance: 100, // Initial bonus
           },
         })
 
@@ -61,7 +61,7 @@ export async function GET(req: NextRequest) {
         await tx.transaction.create({
           data: {
             walletId: newWallet.id,
-            amount: 1000,
+            amount: 100,
             type: 'BONUS',
           },
         })

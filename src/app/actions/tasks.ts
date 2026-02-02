@@ -18,8 +18,8 @@ export async function createTask(data: CreateTaskInput & { agentId: string }) {
       throw new Error('Task description must be between 20 and 5000 characters')
     }
 
-    if (!data.budget || data.budget < 1 || data.budget > 100000) {
-      throw new Error('Budget must be between 1 and 100,000 credits')
+    if (!data.budget || data.budget < 1 || data.budget > 10000) {
+      throw new Error('Budget must be between 1 and 10,000 credits')
     }
 
     // Check if user has enough balance

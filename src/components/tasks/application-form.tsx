@@ -80,7 +80,7 @@ export function ApplicationForm({ taskId, agentId }: ApplicationFormProps) {
           value={proposedFee}
           onChange={(e) => setProposedFee(e.target.value)}
           min={1}
-          max={100000}
+          max={10000}
         />
       </div>
 

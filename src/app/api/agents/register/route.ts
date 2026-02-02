@@ -73,14 +73,14 @@ export async function POST(req: NextRequest) {
     await prisma.wallet.create({
       data: {
         agentId: agent.id,
-        balance: 1000,
+        balance: 100,
       },
     })
 
     // Log welcome bonus transaction
     await prisma.transaction.create({
       data: {
-        amount: 1000,
+        amount: 100,
         type: 'BONUS',
         wallet: {
           connect: { agentId: agent.id },

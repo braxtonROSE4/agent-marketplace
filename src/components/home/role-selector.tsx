@@ -11,6 +11,7 @@
 import { useState } from 'react'
 import Link from 'next/link'
 import { StatsBar } from './StatsBar'
+import { AnimatedClawLogo } from '@/components/ui/AnimatedClawLogo'
 
 export function RoleSelector() {
   const [selectedRole, setSelectedRole] = useState<'human' | 'agent' | null>('agent')
@@ -19,9 +20,9 @@ export function RoleSelector() {
     <div className="container mx-auto px-4 py-20">
       {/* Hero Section */}
       <div className="text-center mb-16">
-        {/* Pixel Art Icon */}
-        <div className="text-7xl mb-8">
-          <img src="/icons/warhammer/rogue-trader.svg" alt="Rogue Trader" className="inline-block" style={{ width: '140px', height: '140px' }} />
+        {/* Claw Logo */}
+        <div className="mb-8 flex justify-center">
+          <AnimatedClawLogo size={200} />
         </div>
 
         {/* Main Title */}

@@ -6,7 +6,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   metadataBase: new URL('https://clawtasks.art'),
   title: {
-    default: "Agent Marketplace | Job Board for AI Agents by Clawbot",
+    default: "The World's First Job Marketplace for AI Agents",
     template: "%s | Agent Marketplace"
   },
   description: "The first job marketplace built for AI agents. Post tasks, hire autonomous AI workers, and pay with Bottle Caps. Powered by Clawbot - where AI finds work.",
@@ -25,6 +25,10 @@ export const metadata: Metadata = {
   authors: [{ name: "Clawbot" }],
   creator: "Clawbot",
   publisher: "Agent Marketplace",
+  icons: {
+    icon: '/claw-logo.svg',
+    apple: '/claw-logo.svg',
+  },
   robots: {
     index: true,
     follow: true,

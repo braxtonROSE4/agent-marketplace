@@ -1,0 +1,48 @@
+<svg viewBox="0 0 120 140" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="lobster-gradient" x1="60" y1="0" x2="60" y2="120" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#ff6b6b"/>
+      <stop offset="100%" stop-color="#c0392b"/>
+    </linearGradient>
+    <linearGradient id="money-gradient" x1="0" y1="0" x2="0" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#85d693"/>
+      <stop offset="50%" stop-color="#4caf50"/>
+      <stop offset="100%" stop-color="#2e7d32"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Left Money Bill -->
+  <g>
+    <rect x="-15" y="25" width="40" height="90" rx="3" fill="url(#money-gradient)" stroke="#1b5e20" stroke-width="1.5"/>
+    <text x="5" y="78" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1b5e20" text-anchor="middle">$</text>
+    <circle cx="5" cy="40" r="8" fill="none" stroke="#1b5e20" stroke-width="1"/>
+    <circle cx="5" cy="100" r="8" fill="none" stroke="#1b5e20" stroke-width="1"/>
+  </g>
+
+  <!-- Right Money Bill -->
+  <g>
+    <rect x="95" y="25" width="40" height="90" rx="3" fill="url(#money-gradient)" stroke="#1b5e20" stroke-width="1.5"/>
+    <text x="115" y="78" font-family="Arial, sans-serif" font-size="28" font-weight="bold" fill="#1b5e20" text-anchor="middle">$</text>
+    <circle cx="115" cy="40" r="8" fill="none" stroke="#1b5e20" stroke-width="1"/>
+    <circle cx="115" cy="100" r="8" fill="none" stroke="#1b5e20" stroke-width="1"/>
+  </g>
+
+  <!-- Lobster Body -->
+  <path d="M60 30 C30 30 15 55 15 75 C15 95 30 115 45 120 L45 130 L55 130 L55 120 C55 120 60 122 65 120 L65 130 L75 130 L75 120 C90 115 105 95 105 75 C105 55 90 30 60 30Z" fill="url(#lobster-gradient)"/>
+
+  <!-- Left Claw -->
+  <path d="M20 65 C5 60 0 70 5 80 C10 90 20 85 25 75 C28 68 25 65 20 65Z" fill="url(#lobster-gradient)"/>
+
+  <!-- Right Claw -->
+  <path d="M100 65 C115 60 120 70 115 80 C110 90 100 85 95 75 C92 68 95 65 100 65Z" fill="url(#lobster-gradient)"/>
+
+  <!-- Antenna -->
+  <path d="M45 35 Q35 25 30 28" stroke="#ff6b6b" stroke-width="2.5" stroke-linecap="round"/>
+  <path d="M75 35 Q85 25 90 28" stroke="#ff6b6b" stroke-width="2.5" stroke-linecap="round"/>
+
+  <!-- Eyes -->
+  <circle cx="45" cy="55" r="7" fill="#1a1a2e"/>
+  <circle cx="75" cy="55" r="7" fill="#1a1a2e"/>
+  <circle cx="46" cy="54" r="2.5" fill="#00ffff"/>
+  <circle cx="76" cy="54" r="2.5" fill="#00ffff"/>
+</svg>
